@@ -1,0 +1,189 @@
+/* Selección universal: aplica a todos los elementos */
+* {
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+    font-family: 'Roboto', sans-serif; /* Establece la fuente predeterminada */
+}
+
+/* Estilo del cuerpo del documento */
+body {
+    height: 100vh; /* Altura de la ventana gráfica */
+    display: flex; /* Uso de Flexbox para centrar contenido */
+    align-items: center; /* Alineación vertical al centro */
+    justify-content: center; /* Alineación horizontal al centro */
+    background-image: url(Imagenes/WhatsApp\ Image\ 2024-05-30\ at\ 16.14.01.jpeg); /* Imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-size: cover; /* La imagen de fondo cubre toda la pantalla */
+    color: gold; /* Color del texto */
+}
+
+/* Contenedor de formularios */
+.container-form {
+    width: 90%; /* Ancho del contenedor */
+    height: 90vh; /* Altura del contenedor */
+    display: flex; /* Uso de Flexbox para distribución */
+    justify-content: space-between; /* Espacio entre los elementos internos */
+    align-items: center; /* Centrar los elementos verticalmente */
+    transition: all .5s ease-out; /* Transición suave para cambios */
+}
+
+/* Sección de bienvenida */
+.welcome-back {
+    flex: 1; /* Tomar el mismo espacio disponible */
+    display: flex; /* Uso de Flexbox */
+    align-items: center; /* Alineación vertical al centro */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    text-align: center; /* Texto centrado */
+}
+
+/* Mensaje de bienvenida */
+.message {
+    padding: 1rem; /* Relleno interno */
+}
+
+/* Título del mensaje */
+.message h2 {
+    font-size: 1.7rem; /* Tamaño de la fuente */
+    padding: 1rem 0; /* Relleno superior e inferior */
+}
+
+/* Botón del mensaje */
+.message button {
+    padding: 1rem; /* Relleno interno */
+    font-weight: 400; /* Peso de la fuente */
+    background-color: black; /* Color de fondo */
+    border-radius: 2rem; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: .9rem; /* Tamaño de la fuente */
+    margin-top: 2rem; /* Margen superior */
+    transition: all .3s ease-in; /* Transición suave para cambios */
+    color: #fff; /* Color del texto */
+}
+
+/* Cambio de color del botón al pasar el cursor */
+.message button:hover {
+    background-color: #4b4949; /* Nuevo color de fondo */
+}
+
+/* Estilo del formulario */
+.formulario {
+    border-radius: 10px;
+    width: 400px; /* Ancho del formulario */
+    padding: 1rem; /* Relleno interno */
+    margin: 2rem; /* Margen alrededor */
+    background-color: rgb(41, 37, 37); /* Color de fondo */
+    text-align: center; /* Texto centrado */
+}
+
+/* Título del formulario */
+.create-account {
+    padding: 2.7rem 0; /* Relleno superior e inferior */
+    font-size: 1.7rem; /* Tamaño de la fuente */
+}
+
+/* Contenedor de iconos de redes sociales */
+.iconos {
+    width: 200px; /* Ancho del contenedor */
+    display: flex; /* Uso de Flexbox */
+    justify-content: space-around; /* Espacio alrededor de los iconos */
+    margin: auto; /* Centrados horizontalmente */
+}
+
+/* Estilo de cada icono */
+.border-icon {
+    height: 20px; /* Altura del icono */
+    width: 20px; /* Ancho del icono */
+    display: flex; /* Uso de Flexbox */
+    align-items: center; /* Alineación vertical al centro */
+    justify-content: center; /* Alineación horizontal al centro */
+    padding: 1.5rem; /* Relleno interno */
+    border: solid thin white; /* Borde delgado y blanco */
+    border-radius: 50%; /* Bordes redondeados */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    transition: all .3s ease-in; /* Transición suave para cambios */
+}
+
+/* Cambio de color del icono al pasar el cursor */
+.border-icon:hover {
+    background-color: #4a4aee; /* Nuevo color de fondo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+}
+
+/* Párrafo para crear una cuenta gratis */
+.cuenta-gratis {
+    padding: 2rem 0; /* Relleno superior e inferior */
+}
+
+/* Estilo de los campos de entrada en el formulario */
+.formulario input {
+    width: 50%; /* Ancho del campo reducido */
+    display: block; /* Se comporta como un bloque */
+    margin: auto; /* Centrados horizontalmente */
+    margin-bottom: 1.5rem; /* Margen inferior */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    border-bottom: white thin solid; /* Borde inferior blanco y delgado */
+    text-align: center; /* Texto centrado */
+    outline: none; /* Sin contorno */
+    padding: .2rem 0; /* Relleno superior e inferior */
+    font-size: .9rem; /* Tamaño de la fuente */
+    color: white; /* Color del texto */
+}
+
+/* Estilo específico para el botón de los formularios */
+.formulario input[type="button"] {
+    width: 50%; /* Ancho del botón reducido */
+    margin: auto; /* Centrados horizontalmente */
+    border: solid thin black; /* Borde delgado y negro */
+    padding: .5rem; /* Relleno interno reducido */
+    border-radius: 2rem; /* Bordes redondeados */
+    background-color: gold; /* Color de fondo */
+    font-weight: 600; /* Peso de la fuente */
+    margin-top: 2rem; /* Margen superior */
+    font-size: .8rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    color: black; /* Color del texto */
+}
+
+
+/* Clase para formularios de inicio de sesión (ocultos por defecto) */
+.sign-in {
+    position: absolute; /* Posición absoluta */
+    opacity: 0; /* Opacidad cero (invisible) */
+    visibility: hidden; /* No visible */
+}
+
+/* Clase para formularios de inicio de sesión cuando están activos */
+.sign-in.active {
+    opacity: 1; /* Opacidad total (visible) */
+    visibility: visible; /* Visible */
+}
+
+/* Clase para formularios de registro cuando están activos */
+.sign-up.active {
+    opacity: 0; /* Opacidad cero (invisible) */
+    visibility: hidden; /* No visible */
+}
+
+/* Estilo para el recuadro blanco */
+.recuadro-blanco {
+    background-color: gold; /* Fondo blanco */
+    padding: 2rem; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    color: black; /* Color del texto en el recuadro */
+    max-width: 400px; /* Ancho máximo para el contenedor */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Ajuste del contenedor de formularios para que tome el espacio disponible */
+.formulario {
+    flex: 1; /* Tomar el mismo espacio disponible */
+    margin: 0 1rem; /* Espacio a los lados */
+    background-color: rgb(41, 37, 37); /* Color de fondo */
+    text-align: center; /* Texto centrado */
+}

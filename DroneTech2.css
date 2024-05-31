@@ -1,0 +1,1251 @@
+/*FUENTES PARA USAR EN EL PROYECTO*/
+@font-face {
+    font-family: "Satoshi-Regular";
+    src: url('Fuentes/Satoshi-Regular.ttf');
+}
+@font-face {
+    font-family: "Satoshi-Medium";
+    src: url('Fuentes/Satoshi-Medium.ttf');
+}
+@font-face {
+    font-family: "Satoshi-Bold";
+    src: url('Fuentes/Satoshi-Bold.ttf');
+}
+@font-face {
+    font-family: "Satoshi-Black";
+    src: url('Fuentes/Satoshi-Black.ttf');
+}
+
+/*CONTENIDO GENERAL*/
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #000000; /* Fondo oscuro para mejor contraste */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #EABE3F;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    color: #EABE3F	; /* Letras blancas */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Aquí se agrega el cursor de puntero */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #EABE3F	;
+    text-decoration: none;
+    cursor: pointer; /* Asegurando que el cursor sea un puntero cuando se enfoque o pase el mouse */
+}
+
+.buttonnn {
+    background-color: #008CBA; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+* {
+    font-family: "Satoshi-Regular";
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    margin-top: 30px;
+    width: 100%;
+    height: 100vh;
+}
+
+.grid-item {
+    padding: 0;
+}
+
+.gold-button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.gold-button:hover {
+    letter-spacing: 3px;
+    background-color: rgb(255, 213, 0); 
+    color: #fff; 
+    box-shadow: rgb(200, 220, 24) 0px 2px 15px 0px;
+}
+
+.gold-button:active {
+    letter-spacing: 3px;
+    background-color: gold;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(217, 220, 24) 0px 7px 29px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+
+/*MENU*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    float: left;
+    margin-top: 20px;
+
+}
+
+header nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+    color: gold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.menu-icon{
+    display: none;
+}
+
+/*SOBRE NOSOTROS*/
+#AboutUs {
+    position: relative;
+    width: 100%;
+    height: 98vh;
+    background-image: url('Imagenes/fondo-dron.png'); 
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    top: 40%;
+    left: 5%; 
+    transform: translateY(-30%);
+    text-align: center;
+    color: white; 
+    width: 30%; 
+    background-color: transparent;
+}
+.content .head-cont {
+    font-size: 26px !important;
+    margin-bottom: 18px;
+    font-family: "Satoshi-Bold";
+    background-color: transparent;
+}
+.content .par-cont {
+    font-size: 16px !important;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    background-color: transparent;
+}
+
+
+/*ACCESORIOS DE LOS DORONES*/
+#Accessories .acc-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 0px; 
+    padding: 0;
+    margin: 0;
+}
+
+.acc-cont{
+    justify-content: center;
+    box-sizing: border-box; 
+}
+
+.cam-ter{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url('Imagenes/Cam-fondo.png'); 
+    background-size: cover;
+    color: white; 
+    border: 1px solid #292929;
+    box-sizing: border-box;
+}
+
+.accesories {
+    position: relative;
+    width: 100%; 
+    height: 350px;
+    background-image: url('Imagenes/Acc-fondo.png'); 
+    background-size: cover;
+    color: white;
+    border: 1px solid #292929;
+    box-sizing: border-box; 
+}
+
+.cont-acc {
+    position: absolute;
+    top: 20px;
+    left: 20px; 
+}
+
+.cont-acc h2 {
+    margin-bottom: 10px; 
+}
+
+.cont-acc button {
+    margin-top: 10px; 
+}
+
+
+/*Inicio del formulario*/
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.319);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80vh;
+    margin-top: 20vh;
+    overflow: hidden;
+}
+
+.login-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    padding: 20px; /* Añadir espacio interno al formulario */
+    background-color: rgba(23, 23, 23, 0.8); /* Fondo semi-transparente */
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+  }
+
+  .form:hover {
+    transform: scale(1.05);
+    border: 1px solid black;
+}
+
+#heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: white;
+}
+
+.input-field {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+}
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+    background-color: grey;
+}
+
+.button1 {
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+}
+
+.button1:hover {
+    background-color: black;
+    color: white;
+}
+
+.button2 {
+    padding: 0.5em;
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+}
+
+.button2:hover {
+    background-color: black;
+    color: white;
+}
+
+.button3 {
+    margin-bottom: 3em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+}
+
+.button3:hover {
+    background-color: red;
+    color: white;
+}
+
+/*DRONES*/
+#Drones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  width: 80%; 
+  height: 80vh;
+  margin: 0 auto; 
+}
+
+.titulo-d{
+    margin-top: 60px;
+    color: white;
+    font-size: 40px;
+    font-family: "Satoshi-Bold";
+    display: grid;
+    place-items: center;
+}
+
+.frase-drones{
+  color: white;
+  display: grid;
+  place-items: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #838383;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden; 
+    border-radius: 50%; 
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.card-container::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-top: 10rem;
+}
+
+.card .img-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+
+.card .img-content svg {
+    width: 50px;
+    height: 50px;
+    fill: #212121;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);   
+}
+
+.card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: #e8e8e8;
+    line-height: 1.5;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    background-color: transparent;
+
+}
+.card .content p{
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.card .content .heading {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.card:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.card:hover .img-content {
+    scale: 2.5;
+    filter: blur(7px);
+}
+
+.card:hover .img-content svg {
+    fill: transparent;
+}
+
+
+/*TARIFAS*/
+#Tarifas {
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 10px;
+}
+
+.titulo-t {
+    color: white;
+    font-size: 40px;
+    font-family: "Satoshi-Bold";
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+   }
+
+.titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px; 
+}
+
+.tarifas {
+    display: grid;
+    grid-gap: 30px 15px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    justify-content: center;
+    margin: 0 0 ;   
+}
+
+.card-t {
+
+        align-items: stretch;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        width: 420px;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        border: 1px solid;
+        border-color: white;
+        padding: 1.5rem;
+        align-self: center;
+      }
+
+ul.lists{
+  font-size: 20px;
+}
+
+.lists {
+
+    margin-bottom: 1rem;
+    flex: 1 1 0%;
+    color: white;
+}
+
+.lists .list {
+
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+
+.lists .list svg {
+
+    height: 1.5rem;
+    width: 1.5rem;
+    color: gold;
+}
+
+.tnombre {
+
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    background-color: gold;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: rgba(17, 24, 39, 1);
+    box-shadow: rgb(217, 220, 24) 0px 4px 10px 0px;
+    transition: all 0.5s ease;
+}
+
+.tnombre:hover {
+    letter-spacing: 3px;
+    background-color: rgb(255, 213, 0); 
+    color: #fff; 
+    box-shadow: rgb(217, 220, 24) 0px 7px 29px 0px;
+}
+.tnombre:active {
+        letter-spacing: 3px;
+        background-color: gold;
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(217, 220, 24) 0px 7px 29px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
+
+ /* CONTADORES DE DATOS */
+.cartitas {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .card {
+    background: black; 
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px; 
+  }
+  
+  .number {
+    color: gold;
+    font-size: 2em; /* Tamaño del número */
+    font-weight: bold;
+  }
+  
+  p {
+    color: white;
+    font-size: 1.5em; /* Tamaño del texto */
+  } 
+/*FOOTER*/
+footer{
+    background-color: #000000ff;
+    color: #ffffff;
+    position: relative;
+    min-height: 350px;
+    padding: 3rem 1rem;
+}
+.footer {
+    padding: 20px;    
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+}
+.contenido img{
+    margin-bottom:25px;
+    width: 200px;
+    height: 100px;
+}
+.contenido h4{
+    color:#ffc94f;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.contenido h4::after{
+    content: '';
+    height:3px;
+    width:0px;
+    background-color: #ffc94f;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.3s ease;
+}
+.contenido h4:hover::after{
+    width:30px;
+}
+.contenido .iconos a i {
+    color:#e8e8e8;
+    margin-top:30px;
+    margin-right: 20px;
+    transition: 0.3s ease;
+    font-size: 30px;
+}
+.contenido .iconos a i:hover{
+    transform: scale(1.5);
+    filter:grayscale(25);
+}
+.enlaces li {
+    margin-bottom: 15px;
+}
+.contenido .enlaces a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.3s, 0.3s;
+    margin-bottom: 5px;
+    display: block;
+    position: relative;
+}
+
+.contenido .enlaces a::before {
+    content: '';
+    height: 15px;
+    width: 3px;
+    background-color: #ffc94f;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    transition: 0.5s ease;
+}
+
+.contenido .enlaces a:hover::before {
+    height: 25px; 
+}
+
+.contenido .enlaces a:hover {
+    transform: translateX(-8px);
+    color: #ffc94f;
+}
+
+.footer-content li a:hover {
+    color: #fff;
+}
+
+/*MEDIAQUERIES SOBRE NOSOTROS & ACCESORIOS (ARANTXA)*/
+
+@media (max-width: 575.98px) {
+    header {
+      padding: 10px;
+    }
+
+    .menu-icon {
+      display: block;
+      margin-left: auto;
+    }
+
+    .menu-icon img{
+        width: 70px;
+    }
+
+    .menu ul {
+      display: none;
+    }
+
+    .gold-button {
+      padding: 8px 15px;
+      font-size: 14px;
+      margin-left: auto;
+    }
+
+    #AboutUs {
+      background-image: none;
+    }
+
+    .content {
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .image-container {
+      display: none;
+    }
+
+    .text-container {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .content .head-cont {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      font-family: "Satoshi-Bold";
+    }
+
+    .content .par-cont {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .content .gold-button {
+      display: block;
+      margin: 0 auto;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+    }
+
+    #Accessories .acc-cont {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .cam-ter, .accesories {
+        width: 100%;
+        margin: 20px auto;
+    }
+  }
+@media only screen and (max-width: 767px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      margin-top: 10px;
+    }
+
+     header {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto; 
+    }
+
+    .menu {
+        margin-left: auto; 
+        margin-right: 20px; 
+    }
+
+    .menu ul {
+        display: none;
+      }
+
+    .menu-icon {
+        display: block; 
+        width: 70px;
+        margin: 5px;
+    }
+
+    .menu-icon img{
+        width: 70px;
+    }
+
+    .gold-button {
+        padding: 8px 15px;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .text-container {
+        width: 90%; 
+        margin: 0 auto; 
+        text-align: center;
+    }
+
+    .content {
+        width: 90%; 
+        padding: 20px; 
+        text-align: center; 
+    }
+
+    #Accessories .acc-cont {
+        display: block; 
+        margin: 0 auto; 
+        width: 90%; 
+    }
+
+    .cam-ter, .accesories {
+        width: 100%; 
+        margin: 20px auto; 
+    }
+
+  }
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #AboutUs {
+        height: 90vh;
+        width: 100%;
+        background-size: cover; 
+    }
+
+    .text-container {
+        width: 60%; 
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+        text-align: left; 
+    }
+
+    .content .head-cont {
+        font-size: 26px !important;
+        margin-bottom: 18px;
+    }
+
+    .content .par-cont {
+        font-size: 16px !important;
+        margin-bottom: 18px;
+    }
+
+    .content .gold-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #Accessories .acc-cont {
+        display: block; 
+        gap: 20px;
+        padding: 0;
+        margin: 10px auto; 
+        width: 80%;
+    }
+
+    .cam-ter, .accesories {
+        width: 90%; 
+        margin: 20px auto;
+        margin: 10px auto;
+    }
+
+    .cont-acc h2 {
+        font-size: 32px;
+    }
+
+    .cont-acc button {
+        margin-top: 10px;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    header {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: none; 
+    }
+
+    .logo {
+        width: 100px; 
+    }
+
+    .menu {
+        display: flex; 
+        align-items: center;
+    }
+
+    .gold-button {
+        font-size: 14px;
+        padding: 10px 20px; 
+    }
+}
+/*MEDIAQUERIES MODELOS & TARIFAS (JORGE)*/
+
+#Drones {
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .card-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .card {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+      }
+
+
+  /* Tamaño  (xs) */
+@media (max-width: 575.98px) {
+    #Drones {
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+        gap: 20px;
+        padding: 10px;
+      }
+
+      .card-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .card {
+        width: 100%;
+        height: 250px;
+        margin-top: 10px;
+      }
+
+      .card-t {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .lists {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+      }
+
+      .tnombre {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        padding: 5px;
+      }
+    }
+
+    #Tarifas {
+
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    .tarifas {
+        grid-template-columns: repeat(1, 1fr);
+      grid-gap: 200px;
+    }
+
+    .card-t {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .lists {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+
+    .tnombre {
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+      padding: 5px;
+    }
+
+
+
+  @media (min-width: 576px) {
+
+    #Tarifas {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    .tarifas {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+
+    .card-t {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #Drones {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .card-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .card {
+          width: 100%;
+          height: 250px;
+          margin-top: 10px;
+      }
+    }
+    #Tarifas {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    .tarifas {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+
+    .card-t {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+
+  @media (min-width: 992px) {
+    #Drones {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        gap: 20px;
+        padding: 20px;
+        margin-top: 5rem;
+      }
+
+      .card-container {
+        width: 90%;
+        height: 90%;
+      }
+
+      .card {
+          width: 100%;
+          height: 250px;
+          margin-top: 10px;
+      }
+    }
+    #Tarifas {
+      width: 98%;
+      height: auto;
+      margin-top: 10rem;
+      padding: 10px;
+    }
+
+    .tarifas {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+
+    }
+
+    .card-t {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      margin-bottom: 100px;
+
+    }
+
+    /*MEDIAQUERIES FOOTER (RONALD)*/
+
+    /* Estilos para pantallas grandes */
+@media only screen and (min-width: 968px) {
+    .footer {
+    grid-template-columns: repeat(5, minmax(200px, auto));
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media only screen and (max-width: 722px) {
+    .footer {
+    grid-template-columns: repeat(5, minmax(200px, auto));
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 480px) {
+    .footer {
+    grid-template-columns: repeat(1, minmax(200px, auto));
+    }
+}
+
+.abrir-menu{
+    display: none;
+}
+
+
+ 
+@media screen and (max-width: 550px) {
+
+    .abrir-menu, .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.sisible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a{
+        color: white;
+    }
+}
+
